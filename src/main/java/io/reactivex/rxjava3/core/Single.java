@@ -169,6 +169,7 @@ public abstract class Single<@NonNull T> implements SingleSource<T> {
             SingleSource<T> source = (SingleSource<T>)sources[0];
             return wrap(source);
         }
+        // eferfref
         return RxJavaPlugins.onAssembly(new SingleAmb<>(sources, null));
     }
 
